@@ -51,21 +51,21 @@ class MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.swipe, color: Colors.grey), 
+              icon: Image.asset('../assets/swipe.png', width: 24, height: 24), 
               label: 'Swipe',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.list, color: Colors.grey),
+              icon: Image.asset('../assets/list.png', width: 24, height: 24),
               label: 'List',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Colors.grey),
+              icon: Image.asset('../assets/home.png', width: 24, height: 24),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.message, color: Colors.grey),
+              icon: Image.asset('../assets/dm.png', width: 24, height: 24),
               label: 'DM',
             ),
             BottomNavigationBarItem(
