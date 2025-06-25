@@ -53,19 +53,19 @@ class MainPageState extends State<MainPage> {
         onTap: _onItemTapped,
         items: [
           BottomNavigationBarItem(
-              icon: Image.asset('../assets/swipe.png', width: 24, height: 24), 
+              icon: Image.asset('assets/swipe.png', width: 24, height: 24), 
               label: 'Swipe',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('../assets/list.png', width: 24, height: 24),
+              icon: Image.asset('assets/list.png', width: 24, height: 24),
               label: 'List',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('../assets/home.png', width: 24, height: 24),
+              icon: Image.asset('assets/home.png', width: 24, height: 24),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('../assets/dm.png', width: 24, height: 24),
+              icon: Image.asset('assets/dm.png', width: 24, height: 24),
               label: 'DM',
             ),
             BottomNavigationBarItem(
