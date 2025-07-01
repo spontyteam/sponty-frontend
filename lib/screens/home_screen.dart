@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/search_bar.dart';
+import '../components/map_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,12 +11,7 @@ class HomeScreen extends StatelessWidget {
       body: Stack(
         children: [
           // Replace with Google Map widget later
-          Container(
-            color: Colors.grey[300],
-            child: const Center(
-              child: Text('Map Goes Here', style: TextStyle(fontSize: 24)),
-            ),
-          ),
+          MapWidget(),
 
           // Bottom rounded white container with search bar inside
           Positioned(
