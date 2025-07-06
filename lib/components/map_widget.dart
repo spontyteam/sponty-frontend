@@ -18,8 +18,14 @@ class _MapWidgetState extends State<MapWidget> {
     bearing: 45.0,
   );
 
-  void _onMapCreated(GoogleMapController controller) {
+  void _onMapCreated(GoogleMapController controller) async {
     _controller = controller;
+
+    final style = await DefaultAssetBundle.of(
+      context,
+    ).loadString('assets/map_style.json');
+
+    _controller.setMapStyle(style);
   }
 
   @override
@@ -34,6 +40,7 @@ class _MapWidgetState extends State<MapWidget> {
       rotateGesturesEnabled: true,
       myLocationEnabled: false,
       myLocationButtonEnabled: false,
+      markers: <Marker>{},
     );
   }
 }
