@@ -8,7 +8,11 @@ class BottomNavbar extends StatelessWidget {
   final int currentIndex;
   final ValueChanged<int> onTap;
 
-  const BottomNavbar({required this.currentIndex, required this.onTap});
+  const BottomNavbar({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
 
   /// Helper to return an SVG icon with correct color based on index
   Widget _buildNavIcon(String assetPath, int index) {

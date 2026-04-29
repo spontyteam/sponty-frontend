@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomSearchBar extends StatelessWidget {
   final ValueChanged<String> onChanged;
+  final TextEditingController? controller;
 
-  const CustomSearchBar({super.key, required this.onChanged});
+  const CustomSearchBar({super.key, required this.onChanged, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -15,23 +16,16 @@ class CustomSearchBar extends StatelessWidget {
         border: Border.all(color: Color(0xFF47A348), width: 2),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 4,
-            offset: Offset(0, 2),
-          )
+          BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2)),
         ],
       ),
       child: Row(
         children: [
-          Image.asset(
-            'assets/search_bar/search.png',
-            width: 20,
-            height: 20,
-          ),
+          Image.asset('assets/search_bar/search.png', width: 20, height: 20),
           const SizedBox(width: 10),
           Expanded(
             child: TextField(
+              controller: controller,
               onChanged: onChanged,
               decoration: const InputDecoration(
                 hintText: 'Search',

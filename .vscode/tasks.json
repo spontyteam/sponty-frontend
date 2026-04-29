@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Logcat: Flutter only",
+      "type": "shell",
+      "command": "adb",
+      "args": ["logcat", "-v", "color", "-s", "flutter"],
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

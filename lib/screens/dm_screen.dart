@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DmScreen extends StatelessWidget {
-  const DmScreen({Key? key}) : super(key: key);
+  const DmScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

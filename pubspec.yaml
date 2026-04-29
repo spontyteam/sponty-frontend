@@ -2,7 +2,7 @@ name: sponty_frontend
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -34,16 +34,20 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  http: ^1.2.2
   flutter_svg: ^2.2.0
   google_maps_flutter: ^2.12.3
-  permission_handler: ^12.0.1
-  geolocator: ^14.0.2
-  flutter_compass: ^0.8.1
-  flutter_launcher_icons: ^0.14.4
+  geolocator: ^10.1.0
+  geocoding: ^2.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # Used in widget tests to fake the Google Maps platform implementation.
+  google_maps_flutter_platform_interface: ^2.14.0
+
+  flutter_launcher_icons: ^0.14.4
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -57,7 +61,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -68,7 +71,6 @@ flutter:
     - assets/icons/
     - assets/search_bar/
     - assets/map_style.json
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
