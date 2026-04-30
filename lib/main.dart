@@ -60,7 +60,7 @@ class MainPageState extends State<MainPage> {
     final injected = widget.backendApiOverride;
     if (injected != null) {
       _pages = <Widget>[
-        const SwipeScreen(),
+        SwipeScreen(backendApi: injected),
         ListScreen(backendApi: injected),
         HomeScreen(backendApi: injected),
         const DmScreen(),
@@ -77,7 +77,7 @@ class MainPageState extends State<MainPage> {
 
     final api = HttpBackendApi(baseUrl: baseUrl);
     _pages = <Widget>[
-      const SwipeScreen(),
+      SwipeScreen(backendApi: api),
       ListScreen(backendApi: api),
       HomeScreen(backendApi: api),
       const DmScreen(),
